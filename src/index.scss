@@ -1,0 +1,506 @@
+$color: rgb(144, 127, 255);
+$edit: rgb(94, 17, 120);
+
+* > {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // height: 300px;
+  // background-color: grey;
+  &__login {
+    // width: 400px;
+  }
+  &__signup {
+    width: 900px;
+    // height: 300px;
+  }
+  &_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &_fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // height: 150px;
+  }
+  &_field {
+    height: 30px;
+    width: 400px;
+    padding: 7px;
+    margin-bottom: 7px;
+  }
+  &_signup {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_button {
+    height: 30px;
+    cursor: pointer;
+    background-color: rgb(144, 127, 255);
+    border: none;
+    color: white;
+  }
+  &_redirect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > a {
+      margin-left: 5px;
+    }
+  }
+}
+
+.homepage-teacher {
+  display: flex;
+}
+.logout {
+  margin-left: auto;
+  cursor: pointer;
+  background-color: rgb(144, 127, 255);
+  border: none;
+  color: white;
+  padding: 5px;
+  height: 30px;
+  &__studentpage {
+    margin-left: 30px;
+  }
+}
+.student_uid {
+  margin-left: auto;
+}
+.classrooms {
+  margin: 30px;
+  width: 500px;
+
+  &_create {
+    display: flex;
+    height: 50px;
+    &_input {
+      // height: 30px;
+      width: 400px;
+      padding: 7px;
+      margin-right: 10px;
+    }
+    &_button {
+      // height: 30px;
+      cursor: pointer;
+      background-color: rgb(144, 127, 255);
+      border: none;
+      color: white;
+    }
+  }
+  &_list {
+    margin-top: 10px;
+    &_item {
+      margin-bottom: 7px;
+      display: flex;
+      justify-content: space-between;
+      // width: 100%;
+      padding: 5px;
+      border: solid 1px black;
+      &_button {
+        cursor: pointer;
+        background-color: rgb(144, 127, 255);
+        border: none;
+        color: white;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+.students {
+  margin: 30px;
+  width: 200px;
+
+  &_create {
+    display: flex;
+    height: 50px;
+    &_input {
+      // height: 30px;
+      width: 100px;
+      padding: 7px;
+      margin-right: 10px;
+    }
+    &_button {
+      // height: 30px;
+      cursor: pointer;
+      background-color: rgb(144, 127, 255);
+      border: none;
+      color: white;
+    }
+  }
+  &_list {
+    margin-top: 10px;
+    &_item {
+      margin-bottom: 7px;
+      display: flex;
+      justify-content: space-between;
+      // width: 100%;
+      padding: 5px;
+      border: solid 1px black;
+      &_button {
+        cursor: pointer;
+        background-color: rgb(144, 127, 255);
+        border: none;
+        color: white;
+        padding: 5px;
+      }
+    }
+  }
+}
+.classroompage {
+  display: flex;
+}
+.studentpage {
+  display: flex;
+}
+.classroom {
+  &_students {
+    margin-top: 30px;
+    width: 200px;
+    &_list {
+      &_item {
+        display: flex;
+        justify-content: space-between;
+        // &_checkbox {
+
+        // }
+        padding: 5px;
+        border: dotted;
+
+        margin-bottom: 5px;
+      }
+    }
+    &_submit {
+      cursor: pointer;
+      background-color: rgb(144, 127, 255);
+      border: none;
+      color: white;
+      padding: 5px;
+      width: 100%;
+    }
+  }
+  &_todos {
+    margin: 30px;
+  }
+  // &_todo {
+  //   margin: 30px;
+  // }
+}
+
+.login-button {
+  cursor: pointer;
+  width: 300px;
+  height: 150px;
+  margin-top: 400px;
+  // align-self: center;
+  border: 10px solid $color;
+  background-color: aquamarine;
+
+  span {
+    color: $color;
+    font-size: x-large;
+    font-weight: bold;
+  }
+}
+
+.logout-button-wrapper {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: end;
+  // background-color: $color;
+}
+
+.logout-button {
+  cursor: pointer;
+  width: 200px;
+  height: 100px;
+  border: 5px solid $color;
+
+  background-color: aquamarine;
+
+  span {
+    color: $color;
+    font-size: x-large;
+    font-weight: bold;
+  }
+}
+
+.todo {
+  &-form {
+    width: 700px;
+    height: fit-content;
+    // background-color: #b1d9da;
+
+    &-edit {
+      margin: 10px 0 20px 0;
+    }
+  }
+
+  &-fieldset {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid $color;
+
+    &-edit {
+      border: 3px solid $edit;
+    }
+  }
+
+  &-first-row-wrapper {
+    height: 50px;
+    display: flex;
+    justify-content: stretch;
+  }
+
+  &-title {
+    width: 55%;
+    border: none;
+    padding: 10px;
+    border-bottom: 3px solid $color;
+    color: $color;
+    // background-color: #b1d9da;
+
+    &:focus {
+      outline: none;
+    }
+
+    &-edit {
+      border-bottom: 3px solid $edit;
+    }
+  }
+
+  &-date {
+    cursor: pointer;
+    width: 25%;
+    padding: 10px;
+    border: 3px solid $color;
+    border-top: none;
+    color: $color;
+    // background-color: #b1d9da;
+
+    &:focus {
+      outline: none;
+    }
+
+    &-edit {
+      border: 3px solid $edit;
+      border-top: none;
+    }
+  }
+
+  &-submit {
+    cursor: pointer;
+    width: 20%;
+    background-color: white;
+    border: none;
+    border-bottom: 3px solid $color;
+    color: $color;
+    font-size: large;
+    font-weight: bold;
+    // background-color: aquamarine;
+
+    &-edit {
+      border-bottom: 3px solid $edit;
+      // background-color: rgb(144, 127, 255);
+    }
+  }
+
+  &-description {
+    // background-color: #b1d9da;
+    height: 70px;
+    padding: 10px;
+    border: none;
+    border-bottom: 3px solid $color;
+    color: $color;
+
+    &:focus {
+      outline: none;
+    }
+
+    &-edit {
+      border-bottom: 3px solid $edit;
+    }
+  }
+}
+
+.files-area {
+  border: 3px solid $color;
+  display: flex;
+  flex-direction: column;
+
+  &-edit {
+    border: 3px solid $edit;
+  }
+}
+
+.browse-button {
+  cursor: pointer;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  // background-color: #b1d9da;
+  border: none;
+  border-bottom: 3px solid $color;
+  // border-right: 5px solid $color;
+  color: $color;
+  font-size: large;
+  font-weight: bold;
+
+  &-edit {
+    border-bottom: 3px solid $edit;
+  }
+}
+
+.browse-wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.files-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  // border-top: 3px solid $color;
+}
+
+.file-wrapper {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  // border-top: 3px solid $color;
+  span {
+    display: flex;
+    align-items: center;
+    color: $color;
+    // font-size: large;
+    // font-weight: bold;
+    // text-align: center;
+  }
+
+  text-decoration: none;
+}
+
+.close {
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  background-color: red;
+  clip-path: polygon(
+    20% 0%,
+    0% 20%,
+    30% 50%,
+    0% 80%,
+    20% 100%,
+    50% 70%,
+    80% 100%,
+    100% 80%,
+    70% 50%,
+    100% 20%,
+    80% 0%,
+    50% 30%
+  );
+}
+
+.todo-item {
+  width: 700px;
+  height: fit-content;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid $color;
+  margin-top: 10px;
+
+  &-done {
+    // background-color: rgba(91, 212, 174, 0.248);
+  }
+
+  &-first-row-wrapper {
+    display: flex;
+    height: 50px;
+    border-bottom: 3px solid $color;
+  }
+
+  &-second-row-wrapper {
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+  }
+
+  &-checkbox {
+    cursor: pointer;
+    width: 45px;
+  }
+
+  &-title {
+    width: 66%;
+    padding: 10px;
+    color: $color;
+    text-align: center;
+    // border-left: 5px solid $color;
+  }
+
+  &-description {
+    padding: 10px;
+    color: $color;
+  }
+
+  &-date {
+    border-top: 3px solid $color;
+    align-self: flex-end;
+    color: $color;
+  }
+
+  &-button {
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    // border-bottom: 5px solid $color;
+    // background-color: aquamarine;
+    border-left: 3px solid $color;
+    width: 17%;
+    color: $color;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // font-size: large;
+    // font-weight: bold;
+  }
+}
+.students-wrapper {
+  display: flex;
+  padding: 5px;
+  padding-bottom: 0;
+  & > div {
+    // width: 70px;
+    border: none;
+  }
+}
+
+.table-button {
+  width: 200px !important;
+}
+
+.accept-button {
+}
